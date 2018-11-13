@@ -4,7 +4,7 @@ import net.corda.core.contracts.ContractState;
 import net.corda.core.identity.AbstractParty;
 import net.corda.core.identity.Party;
 import java.util.List;
-import com.google.common.collect.ImmutableList;
+import java.util.Arrays;
 
 // *********
 // * State *
@@ -35,6 +35,6 @@ public class IOUState implements ContractState {
 
     @Override
     public List<AbstractParty> getParticipants() {
-        return ImmutableList.of(lender, borrower);
+        return Arrays.asList(lender, borrower);
     }
 }
